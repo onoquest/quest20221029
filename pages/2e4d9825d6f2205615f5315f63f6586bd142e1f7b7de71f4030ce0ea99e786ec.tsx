@@ -1,8 +1,14 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+// import GoogleMapReact from 'google-map-react';
 
 export default function Home() {
+  const defaultLatLng = {
+    lat: 35.7022589,
+    lng: 139.7744733,
+  };
+
   return (
     <div className={styles.container}>
       <Head>
