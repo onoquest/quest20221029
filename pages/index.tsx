@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>set001</title>
+        <title>OnoQuest</title>
         <meta name="description" content="set001" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
