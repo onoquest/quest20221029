@@ -1,11 +1,10 @@
 import Image from 'next/image'
 
-
 type Props = {
     index:number, hint:string;
 }
 
-export const ImageDescription = (props: Props) => {
+const ImageDescription = (props: Props) => {
 
     let index:number, hint:string;
 
@@ -20,3 +19,5 @@ export const ImageDescription = (props: Props) => {
     </div>
     )
 }
+
+export default ImageDescription;
