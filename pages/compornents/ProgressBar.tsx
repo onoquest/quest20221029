@@ -2,10 +2,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-
+type Props = {
+  bgcolor: string
+  completed: number
+}
 // import GoogleMapReact from 'google-map-react';
 
-export const ProgressBar = (props) => {
+export const ProgressBar = (props: Props) => {
   const { bgcolor, completed } = props;
 
   const containerStyles = {
@@ -21,7 +24,6 @@ export const ProgressBar = (props) => {
     width: `${completed}%`,
     backgroundColor: bgcolor,
     borderRadius: 'inherit',
-    textAlign: 'right'
   }
 
   const labelStyles = {
