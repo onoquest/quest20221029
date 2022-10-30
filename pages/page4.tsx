@@ -3,6 +3,9 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import ProgressBar from './compornents/ProgressBar'
 import ImageDescription from './compornents/ImageDescription'
+import useWindowSize from 'react-use/lib/useWindowSize'
+import Confetti from 'react-confetti'
+
 
 // import GoogleMapReact from 'google-map-react';
 
@@ -14,9 +17,12 @@ export default function Home() {
 
   const progress_contents = {
     bgcolor: "#6a1b9a",
-    completed: 25
+    completed: 100
   }
-  
+
+  const { width, height } = useWindowSize()
+
+  console.log(width, height)
 
   return (
     <div className={styles.container}>
@@ -27,18 +33,29 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-      
+      <Confetti
+        width={2000}
+        height={1200}
+        recycle={true}
+      />
         <h1 className={styles.title}>
           Welcome to <a href="https://www.info-ono.jp/">Ono Quest</a>
         </h1>
 
         <Image src="/images/imagetest01.png"  alt="My avatar "width={320} height={132} />
-
+        
       <ProgressBar bgcolor={progress_contents.bgcolor} completed={progress_contents.completed}/>
-        <h1>1/4 完了</h1>
-      <ImageDescription index={1} keyword={"big (漢字にしてみよう)"} ></ImageDescription>
-
+      <h1>4/4 完了</h1>
+      
+      <h1>お宝GET!</h1>
+      <Image src="/images/tresure.png"  alt="My avatar "width={500} height={300}></Image>
+      <h2>よく頑張った！
+      スタート地点に帰還し、係員に
+      </h2>
+      <h1 style={{color:"red"}}>小野LOVE!</h1>
+      <h2>と伝えよ！</h2>
       </main>
+
 
       <footer className={styles.footer}>
       </footer>

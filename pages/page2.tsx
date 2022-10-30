@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import ProgressBar from './compornents/ProgressBar'
+import ImageDescription from './compornents/ImageDescription'
 
 // import GoogleMapReact from 'google-map-react';
 
@@ -13,7 +14,7 @@ export default function Home() {
 
   const progress_contents = {
     bgcolor: "#6a1b9a",
-    completed: 66
+    completed: 50
   }
   
 
@@ -33,9 +34,10 @@ export default function Home() {
 
         <Image src="/images/imagetest01.png"  alt="My avatar "width={320} height={132} />
 
-
       <ProgressBar bgcolor={progress_contents.bgcolor} completed={progress_contents.completed}/>
-        <h1>2/3 完了</h1>
+        <h1>2/4 完了</h1>
+
+      <ImageDescription index={2} keyword={"mountain (漢字に直してみよう)"}></ImageDescription>
       </main>
 
       <footer className={styles.footer}>

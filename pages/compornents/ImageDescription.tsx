@@ -1,21 +1,24 @@
 import Image from 'next/image'
 
 type Props = {
-    index:number, hint:string;
+    index:number, 
+    keyword:string
 }
 
-const ImageDescription = (props: Props) => {
+const ImageDescription = (props:Props) => {
 
-    let index:number, hint:string;
+    let index:number, keyword:string;
 
-    ({index, hint} = props);
+    ({index, keyword} = props);
 
     return (
     <div>
-        <h1>次なる目的地はこちら！</h1>
-        <Image src={`/images/image/map${index}.png`}  alt= {`map${index}`} width={320} height={132} />
-        <Image src={`/images/image/photo${index}.png`}  alt={`photo${index}`} width={320} height={132} />
-        <h2>宝へのヒント！ →　{hint}</h2>
+
+        <h2>キーワード{`${index}`} →　{keyword}</h2>
+
+        <h1>次の場所で草を刈れ！</h1>
+        <Image src={`/images/map${index}.png`}  alt= {`map${index}`} width={500} height={400} />
+        <Image src={`/images/photo${index}.png`}  alt={`photo${index}`} width={500} height={400} />
     </div>
     )
 }
