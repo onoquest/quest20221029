@@ -28,11 +28,7 @@ export default function Home() {
 
       <main className={styles.main}>
       
-        <h1 className={styles.title}>
-          Welcome to <a href="https://www.info-ono.jp/">Ono Quest</a>
-        </h1>
-
-        <Image src="/images/imagetest01.png"  alt="My avatar "width={320} height={132} />
+      <Image src="/images/logo.png"  alt="My avatar" width={880*1.2} height={277*1.2} />
 
       <ProgressBar bgcolor={progress_contents.bgcolor} completed={progress_contents.completed}/>
       <h1>3/4 完了</h1>

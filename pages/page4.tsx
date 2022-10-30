@@ -32,17 +32,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      
       <main className={styles.main}>
-      <Confetti
-        width={2000}
-        height={1200}
-        recycle={true}
-      />
-        <h1 className={styles.title}>
-          Welcome to <a href="https://www.info-ono.jp/">Ono Quest</a>
-        </h1>
-
-        <Image src="/images/imagetest01.png"  alt="My avatar "width={320} height={132} />
+      
+      <Confetti width={width} height={height} ></Confetti>
+      <Image src="/images/logo.png"  alt="My avatar" width={880*1.2} height={277*1.2} />
         
       <ProgressBar bgcolor={progress_contents.bgcolor} completed={progress_contents.completed}/>
       <h1>4/4 完了</h1>
