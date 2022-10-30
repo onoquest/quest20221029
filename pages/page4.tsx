@@ -35,7 +35,7 @@ export default function Home() {
       
       <main className={styles.main}>
       
-      <Confetti width={width} height={height} ></Confetti>
+      <Confetti width={2000} height={1200} ></Confetti>
       <Image src="/images/logo.png"  alt="My avatar" width={880*1.2} height={277*1.2} />
         
       <ProgressBar bgcolor={progress_contents.bgcolor} completed={progress_contents.completed}/>
